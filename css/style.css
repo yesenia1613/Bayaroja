@@ -234,6 +234,9 @@ header div#logo {
     transition: all 0.3s;
 
 }
+img .logoimg{
+    width: 150px;
+}
 
 header .logo-2 {
     display: none;
