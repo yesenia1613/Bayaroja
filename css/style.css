@@ -3766,10 +3766,13 @@ h4.teaser {
 }
 
 h5.s1{
-    font-size: 120px;
-    font-family: var(--deco-font);
+    font-size: 73px;
+    /*font-family: var(--deco-font);*/
     margin: 0;
     font-weight: 400;
+}
+h5.s1.title-img{
+font-size: 60px;
 }
 
 .de-title {
