@@ -9424,7 +9424,10 @@ a:hover,
     line-height: 100px;
     position: relative;
 }
-.carousel-item h1 .title1{
+.carousel-item h3, .de-title-2 h3.title1-2{
+    font-size: 115px;
+}
+.carousel-item h1.title1{
     margin-top: -1px;
 }
 
