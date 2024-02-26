@@ -3770,6 +3770,7 @@ h5.s1{
     /*font-family: var(--deco-font);*/
     margin: 0;
     font-weight: 400;
+    line-height: 3;
 }
 h5.s1.title-img{
 font-size: 60px;
