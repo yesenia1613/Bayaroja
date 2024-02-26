@@ -938,6 +938,10 @@ header.header-mobile.header-light #menu-btn {
 
 /* ================================================== */
 
+img.jarallax-img {
+    filter: brightness(0.4);
+}
+
 section {
     padding: 100px 0 100px 0;
     position: relative;
