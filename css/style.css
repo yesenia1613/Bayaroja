@@ -9424,6 +9424,9 @@ a:hover,
     line-height: 100px;
     position: relative;
 }
+.carousel-item .title1 h1{
+    margin-top: -13px;
+}
 
 .carousel-item h3.s1{
     font-family: var(--title-font);
