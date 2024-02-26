@@ -9416,7 +9416,7 @@ a:hover,
 
 .carousel-item h3,
 .de-title-2 h3{
-    font-family: var(--deco-font);
+    /*font-family: var(--deco-font);*/
     font-size: 120px;
     font-weight: 500;
     margin-bottom: 0px;
@@ -9425,7 +9425,7 @@ a:hover,
     position: relative;
 }
 .carousel-item h3, .de-title-2 h3.title1-2{
-    font-size: 115px;
+    font-size: 60px;
 }
 .carousel-item h1.title1{
     margin-top: -1px;
