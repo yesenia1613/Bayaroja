@@ -232,10 +232,7 @@ header div#logo {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-    max-width: 100%; /* Hace que la imagen no se desborde del contenedor */
-    height: auto; /* Mantiene la proporción de aspecto de la imagen */
-    display: block; /* Elimina cualquier espacio adicional alrededor de la imagen */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+
 }
 
 header .logo-2 {
