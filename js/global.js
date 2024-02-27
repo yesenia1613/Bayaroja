@@ -1,24 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    cargarEncabezado();
-    cargarPiePagina();
-});
-
+// Función para cargar el encabezado
 function cargarEncabezado() {
-    const headerContainer = document.getElementById("header-container");
-
-    fetch('header.html')
+    fetch('../header.html')
         .then(response => response.text())
-        .then(data => {
-            headerContainer.innerHTML = data;
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
         });
 }
 
-function cargarPiePagina() {
-    const footerContainer = document.getElementById("footer-container");
-
-    fetch('footer.html')
+// Función para cargar el pie de página
+function cargarPieDePagina() {
+    fetch('../footer.html')
         .then(response => response.text())
-        .then(data => {
-            footerContainer.innerHTML = data;
+        .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
         });
 }
+
+// Llamar a las funciones para cargar el encabezado y el pie de página
+cargarEncabezado();
+cargarPieDePagina();
