@@ -26,3 +26,4 @@ $pp->getReCaptcha()->initSecretKey('6LfVKoIpAAAAALgBlth8AG4-9QQdKmEMw2W7VaoH');
 $pp->sendEmailTo('yesi.t.rdz@gmail.com'); // ← Your email here
 
 echo $pp->process($_POST);
+?>
