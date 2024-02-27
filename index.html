@@ -384,45 +384,41 @@
                                 <form name="contactForm" id='contact_form' class="form-border" method="post" action="/handler.php">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div id='name_error' class='error'>Porfavor registre su nombre</div>
+                                            <div id='name_error' class='error'>Por favor registre su nombre</div>
                                             <div>
                                                 <input type='text' name='name' id='name' class="form-control" placeholder="Nombre Completo" required>
                                             </div>
-    
-                                            <div id='email_error' class='error'>Porfavor registre un email valido.</div>
+                                
+                                            <div id='email_error' class='error'>Por favor registre un correo válido.</div>
                                             <div>
                                                 <input type='email' name='email' id='email' class="form-control" placeholder="Correo" required>
                                             </div>
-    
-                                            <div id='phone_error' class='error'>Porfavor registre un numero de telefono.</div>
+                                
+                                            <div id='phone_error' class='error'>Por favor registre un número de teléfono.</div>
                                             <div>
-                                                <input type='text' name='phone' id='phone' class="form-control" placeholder="Telefono" required>
+                                                <input type='text' name='phone' id='phone' class="form-control" placeholder="Teléfono" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div id='message_error' class='error'>Porfavor agregue el mensaje.</div>
+                                            <div id='message_error' class='error'>Por favor agregue el mensaje.</div>
                                             <div>
                                                 <textarea name='message' id='message' class="form-control" placeholder="Mensaje" required></textarea>
                                             </div>
                                         </div>
-    
+                                
                                         <div class="col-md-12">
                                             <div class="g-recaptcha" data-sitekey="6LfVKoIpAAAAAGkffHEaMWbEhhdFVCIhMsqYVx1O"></div>
                                             <p id='submit' class="mt20">
-                                                <input type='submit' id='submit' value='Submit Form' class="btn btn-main">
+                                                <input type='submit' id='submit' value='Enviar Formulario' class="btn btn-main">
                                             </p>
-                                            <div id='mail_success' class='success'>Su registro a sido exitoso.</div>
-                                            <div id='mail_fail' class='error'>A ocurrido un error, porfavor intentalo de nuevo.</div>
-                                            
                                         </div>
                                     </div>
                                 </form>
-    
-                                <div id="success_message" class='success'>
-                                    Su mensaje ha sido enviado exitosamente, porfavor refresque la pagina.
+                                <div id="success_message" class='success' style="display: none;">
+                                    Su mensaje ha sido enviado exitosamente, por favor refresque la página.
                                 </div>
-                                <div id="error_message" class='error'>
-                                   Error al enviar el mensaje, porfavor intentelo de nuevo
+                                <div id="error_message" class='error' style="display: none;">
+                                    Error al enviar el mensaje, por favor inténtelo de nuevo.
                                 </div>
     
                             </div>
@@ -468,5 +464,6 @@
     <script src="js/designesia.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="form.js"></script>
+
 </body>
 </html>
