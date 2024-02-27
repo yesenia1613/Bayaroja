@@ -248,7 +248,8 @@
                         </div>
                     </div>
                 </section>
-                <section id="section-menu-title-2s" aria-label="section">
+                <section id="section-menu-title-2s" aria-label="section" class="jarallax">
+                    <img class="jarallax-img" src="images/background/7.jpg" alt="" />
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-md-6 offset-md-3 text-center">
@@ -267,7 +268,7 @@
                                 <div class="de-image-hover rounded">
                                     <a href="images/gallery/1.jpg" class="image-popup">                                
                                         <span class="dih-title-wrap">
-                                            <span class="dih-title">View</span>
+                                            <span class="dih-title">Ver</span>
                                         </span>
                                         <span class="dih-overlay"></span>
                                         <img src="images/gallery/1.jpg" class="lazy img-fluid" alt="">
@@ -279,7 +280,7 @@
                                 <div class="de-image-hover rounded">
                                     <a href="images/gallery/2.jpg" class="image-popup">                                
                                         <span class="dih-title-wrap">
-                                            <span class="dih-title">View</span>
+                                            <span class="dih-title">Ver</span>
                                         </span>
                                         <span class="dih-overlay"></span>
                                         <img src="images/gallery/2.jpg" class="lazy img-fluid" alt="">
@@ -291,7 +292,7 @@
                                 <div class="de-image-hover rounded">
                                     <a href="images/gallery/3.jpg" class="image-popup">                                
                                         <span class="dih-title-wrap">
-                                            <span class="dih-title">View</span>
+                                            <span class="dih-title">Ver</span>
                                         </span>
                                         <span class="dih-overlay"></span>
                                         <img src="images/gallery/3.jpg" class="lazy img-fluid" alt="">
@@ -303,7 +304,7 @@
                                 <div class="de-image-hover rounded">
                                     <a href="images/gallery/4.jpg" class="image-popup">                                
                                         <span class="dih-title-wrap">
-                                            <span class="dih-title">View</span>
+                                            <span class="dih-title">Ver</span>
                                         </span>
                                         <span class="dih-overlay"></span>
                                         <img src="images/gallery/4.jpg" class="lazy img-fluid" alt="">
@@ -315,7 +316,7 @@
                                 <div class="de-image-hover rounded">
                                     <a href="images/gallery/5.jpg" class="image-popup">                                
                                         <span class="dih-title-wrap">
-                                            <span class="dih-title">View</span>
+                                            <span class="dih-title">Ver</span>
                                         </span>
                                         <span class="dih-overlay"></span>
                                         <img src="images/gallery/5.jpg" class="lazy img-fluid" alt="">
@@ -327,7 +328,7 @@
                                 <div class="de-image-hover rounded">
                                     <a href="images/gallery/6.jpg" class="image-popup">                                
                                         <span class="dih-title-wrap">
-                                            <span class="dih-title">View</span>
+                                            <span class="dih-title">Ver</span>
                                         </span>
                                         <span class="dih-overlay"></span>
                                         <img src="images/gallery/6.jpg" class="lazy img-fluid" alt="">
@@ -338,32 +339,34 @@
                         </div>
                     </div>
                 </section>
+                <!-- Contact Form Section -->
                 <section>
-                    <div class="container">
+                    <div class="container" id="contacto">
                         <div class="row">
                             <div class="col-md-8 offset-md-2">
+                                <h5 class="s1 wow fadeInUp contactform" data-wow-delay=".5s"><span class="id-color-2">Contactanos</span></h5>
                                 <form name="contactForm" id='contact_form' class="form-border" method="post">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div id='name_error' class='error'>Please enter your name.</div>
+                                            <div id='name_error' class='error'>Porfavor registre su nombre</div>
                                             <div>
-                                                <input type='text' name='Name' id='name' class="form-control" placeholder="Your Name" required>
+                                                <input type='text' name='Nombre' id='name' class="form-control" placeholder="Nombre Completo" required>
                                             </div>
     
-                                            <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
+                                            <div id='email_error' class='error'>Porfavor registre un email valido.</div>
                                             <div>
-                                                <input type='email' name='Email' id='email' class="form-control" placeholder="Your Email" required>
+                                                <input type='email' name='Correo' id='email' class="form-control" placeholder="Correo" required>
                                             </div>
     
-                                            <div id='phone_error' class='error'>Please enter your phone number.</div>
+                                            <div id='phone_error' class='error'>Porfavor registre un numero de telefono.</div>
                                             <div>
-                                                <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone" required>
+                                                <input type='text' name='Telefono' id='phone' class="form-control" placeholder="Telefono" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div id='message_error' class='error'>Please enter your message.</div>
+                                            <div id='message_error' class='error'>Porfavor agregue el mensaje.</div>
                                             <div>
-                                                <textarea name='message' id='message' class="form-control" placeholder="Your Message" required></textarea>
+                                                <textarea name='mensaje' id='message' class="form-control" placeholder="Mensaje" required></textarea>
                                             </div>
                                         </div>
     
@@ -372,24 +375,25 @@
                                             <p id='submit' class="mt20">
                                                 <input type='submit' id='send_message' value='Submit Form' class="btn btn-main">
                                             </p>
-                                            <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                            <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                            <div id='mail_success' class='success'>Su registro a sido exitoso.</div>
+                                            <div id='mail_fail' class='error'>A ocurrido un error, porfavor intentalo de nuevo.</div>
                                             
                                         </div>
                                     </div>
                                 </form>
     
                                 <div id="success_message" class='success'>
-                                    Your message has been sent successfully. Refresh this page if you want to send more messages.
+                                    Su mensaje ha sido enviado exitosamente, porfavor refresque la pagina.
                                 </div>
                                 <div id="error_message" class='error'>
-                                    Sorry there was an error sending your form.
+                                   Error al enviar el mensaje, porfavor intentelo de nuevo
                                 </div>
     
                             </div>
                         </div>
                     </div>    
                 </section>
+                <!-- Contact Form Section close -->
         </div>
         <!-- content close -->
         <a href="#" id="back-to-top"></a>
@@ -404,7 +408,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/plugins.min.js"></script>
     <script src="js/designesia.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <script src="form.js"></script>
     <script src="js/global.js"></script>
 </body>
