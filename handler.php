@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $name = $_POST["name"];
   $email = $_POST["email"];
   $message = $_POST["message"];
-  $recaptchaResponse = $_POST["g-recaptcha-response"];
+  $recaptchaResponse = $_POST["g-recaptcha"];
   
   // Verifica si la respuesta de reCAPTCHA no está vacía
   if (!$recaptchaResponse) {
