@@ -1,38 +1,63 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var contactForm = document.getElementById("contact_form");
-    if (contactForm) {
-        contactForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-            var formData = new FormData(contactForm);
 
-            fetch(contactForm.action, {
-                method: "POST",
-                body: formData
-            })
-            .then(function(response) {
-                if (!response.ok) {
-                    throw new Error("Error en la solicitud. Código de estado: " + response.status);
-                }
-                return response.json();
-            })
-            .then(function(data) {
-                var successMessage = document.getElementById("mail_success");
-                var errorMessage = document.getElementById("mail_fail");
+$(function()
+{
+    function after_form_submitted(data) 
+    {
+        if(data.result == 'success')
+        {
+            $('form#contact_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
 
-                if (data.success) {
-                    successMessage.style.display = "block";
-                    errorMessage.style.display = "none";
-                    contactForm.reset();
-                } else {
-                    successMessage.style.display = "none";
-                    errorMessage.style.display = "block";
-                }
-            })
-            .catch(function(error) {
-                console.error("Error:", error);
-                var errorMessage = document.getElementById("mail_fail");
-                errorMessage.style.display = "block";
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
             });
-        });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' ); 
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+            
+        }//else
     }
+
+	$('#contact_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' ); 
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+        
+
+                    $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json' 
+            });        
+        
+      });	
 });
