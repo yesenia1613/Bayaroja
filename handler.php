@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $name = $_POST["name"];
   $email = $_POST["email"];
   $message = $_POST["message"];
-  $recaptchaResponse = $_POST["recaptchaResponse"];
+  $recaptchaResponse = $_POST["g-recaptcha-response"];
   
   // Verifica si la respuesta de reCAPTCHA no está vacía
   if (!$recaptchaResponse) {
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     CURLOPT_POSTFIELDS => http_build_query($recaptchaData),
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT => 10,
-    CURLOPT_SSL_VERIFYPEER => false // Deshabilita la verificación SSL temporalmente (deberías configurar SSL en tu servidor para producción)
+    CURLOPT_SSL_VERIFYPEER => true // Deshabilita la verificación SSL temporalmente (deberías configurar SSL en tu servidor para producción)
   ));
   $response = curl_exec($curl);
   curl_close($curl);

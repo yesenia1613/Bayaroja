@@ -1,13 +1,11 @@
-// form
 document.addEventListener("DOMContentLoaded", function() {
   var contactForm = document.getElementById("contact_form");
   if (contactForm) {
       contactForm.addEventListener("submit", function(event) {
           event.preventDefault();
-          var form = event.target;
-          var formData = new FormData(form);
+          var formData = new FormData(contactForm);
 
-          fetch(form.action, {
+          fetch(contactForm.action, {
               method: "POST",
               body: formData
           })
@@ -15,19 +13,22 @@ document.addEventListener("DOMContentLoaded", function() {
               return response.json();
           })
           .then(function(data) {
+              var successMessage = document.getElementById("mail_success");
+              var errorMessage = document.getElementById("mail_fail");
+
               if (data.success) {
-                  document.getElementById("success_message").style.display = "block";
-                  document.getElementById("error_message").style.display = "none";
-                  form.reset();
+                  successMessage.style.display = "block";
+                  errorMessage.style.display = "none";
+                  contactForm.reset();
               } else {
-                  document.getElementById("success_message").style.display = "none";
-                  document.getElementById("error_message").style.display = "block";
+                  successMessage.style.display = "none";
+                  errorMessage.style.display = "block";
               }
           })
           .catch(function(error) {
               console.error("Error:", error);
-              document.getElementById("success_message").style.display = "none";
-              document.getElementById("error_message").style.display = "block";
+              var errorMessage = document.getElementById("mail_fail");
+              errorMessage.style.display = "block";
           });
       });
   }
