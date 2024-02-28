@@ -16511,9 +16511,9 @@ img {
     }
 
     .carousel-item h3{
-        font-size: 84px;
-        line-height: .75em;
-        margin-bottom: 20px;
+        font-size: 77px;
+        line-height: .85em;
+        margin-bottom: 40px;
     }
 
     h5.s1{
@@ -16749,6 +16749,20 @@ img {
 
     .timeline-pic {
         height: 300px;
+    }
+    .image-with-counter .div-1{
+        padding: 0px;
+        width: 128px;
+        height: 127px;
+        border-radius: 100px;
+        padding-top: 27px;
+        margin-top: 35px;
+    }
+    .de_count h3 span {
+        font-size: 31px;
+    }
+    .de_count h5 {
+        font-size: 14px;
     }
 }
 
