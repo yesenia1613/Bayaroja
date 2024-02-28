@@ -53,7 +53,7 @@ $(function()
 
                     $.ajax({
                 type: "POST",
-                url: 'handler.php',
+                url: 'https://trsports.netlify.app/handler.php',
                 data: $form.serialize(),
                 success: after_form_submitted,
                 dataType: 'json' 
