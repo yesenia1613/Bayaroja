@@ -7567,6 +7567,10 @@ a.btn-right {
     .all-timelines::before {
         top: 32px;
     }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
+    }
 }
 
 
@@ -15676,6 +15680,10 @@ img {
     .de_table .tr .td:nth-child(7) {
         display: none;
     }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
+    }
 
     .col-right {
         position: absolute;
@@ -16493,6 +16501,10 @@ img {
     #subheader h1{
         font-size: 32px;
     }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
+    }
 
     .carousel-item h3{
         font-size: 84px;
@@ -16717,6 +16729,10 @@ img {
         padding-left: 30px;
         padding-right: 30px;
     }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
+    }
 
     .feature-box-image,
     .pricing-box {
@@ -16741,6 +16757,10 @@ img {
     .pf_full_width .item {
         float: left;
         width: 100%;
+    }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
     }
 
     .text-item {
@@ -16804,6 +16824,10 @@ img {
 @media only screen and (max-width: 360px) {
     #topbar {
         display: none;
+    }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
     }
 }
 
