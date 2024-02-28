@@ -18,6 +18,7 @@
     <!-- color scheme -->
     <link href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" id="colors" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="dark-scheme">
     <div id="wrapper">
@@ -457,11 +458,71 @@
     </div>
     <!-- Javascript Files
     ================================================== -->
+    <script>
+        $(document).ready(function() {
+            $('#contact_form').submit(function(event) {
+                event.preventDefault(); // Evitar el envío predeterminado del formulario
+        
+                // Validar el formulario
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var phone = $('#phone').val();
+                var message = $('#message').val();
+        
+                if (name == "") {
+                    $('#name_error').show();
+                    return false;
+                } else {
+                    $('#name_error').hide();
+                }
+        
+                if (email == "") {
+                    $('#email_error').show();
+                    return false;
+                } else {
+                    $('#email_error').hide();
+                }
+        
+                if (phone == "") {
+                    $('#phone_error').show();
+                    return false;
+                } else {
+                    $('#phone_error').hide();
+                }
+        
+                if (message == "") {
+                    $('#message_error').show();
+                    return false;
+                } else {
+                    $('#message_error').hide();
+                }
+        
+                // Realizar el envío del formulario
+                var formData = $(this).serialize(); // Serializar los datos del formulario
+                $.ajax({
+                    type: 'POST',
+                    url: 'tu_archivo_php.php', // URL del archivo PHP que maneja el formulario
+                    data: formData,
+                    success: function(response) {
+                        // Manejar la respuesta exitosa
+                        $('#success_message').show();
+                        $('#error_message').hide();
+                        $('#contact_form')[0].reset(); // Limpiar el formulario
+                    },
+                    error: function(xhr, status, error) {
+                        // Manejar errores
+                        console.error(xhr.responseText);
+                        $('#success_message').hide();
+                        $('#error_message').show();
+                    }
+                });
+            });
+        });
+        </script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/plugins.min.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="form.js"></script>
 
 </body>
 </html>
