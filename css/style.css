@@ -9425,6 +9425,17 @@ a:hover,
     letter-spacing: .2em;
     margin-left: .1em;
 }
+.carousel-item h2{
+    font-size: 120px;
+    display: block;
+    color: #fff;
+    margin-top: -25px;
+    margin-bottom:40px;
+    width: 100%;
+    font-weight: 800;
+    letter-spacing: .2em;
+    margin-left: .1em;
+}
 
 .carousel-item h1.s1,
 .de-title-2 h1.s1 {
@@ -16501,6 +16512,11 @@ img {
     #subheader h1{
         font-size: 32px;
     }
+    .carousel-item h2,
+    .carousel-item h2.s1, .de-title-2 h2.s1,
+    #subheader h2{
+        font-size: 32px;
+    }
     h5.s1.contactform{
         font-size: 55px;
 
@@ -16511,10 +16527,18 @@ img {
     }
 
     .carousel-item h3{
-        font-size: 77px;
+        font-size: 57px;
         line-height: .85em;
         margin-bottom: 40px;
     }
+    .carousel-control-next-icon.carousel-control-prev-icon{
+        width: 41px;
+        height: 43px;
+        padding-top: 9px;
+    }
+    #de-carousel .carousel-control-next, #de-carousel .carousel-control-prev{
+        width: 58px;
+      }
 
     h5.s1{
         font-size: 84px;
@@ -16733,6 +16757,33 @@ img {
         padding-left: 30px;
         padding-right: 30px;
     }
+    .carousel-item h2,
+    .carousel-item h2.s1, .de-title-2 h2.s1,
+    #subheader h2{
+        font-size: 32px;
+    }
+    h5.s1.contactform{
+        font-size: 55px;
+
+    }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
+    }
+
+    .carousel-item h3{
+        font-size: 57px;
+        line-height: .85em;
+        margin-bottom: 40px;
+    }
+    .carousel-control-next-icon.carousel-control-prev-icon{
+        width: 41px;
+        height: 43px;
+        padding-top: 9px;
+    }
+    #de-carousel .carousel-control-next, #de-carousel .carousel-control-prev{
+        width: 58px;
+      }
     img.f-logo.logoimg {
         margin-top: -27px;
         margin-left: -30px;
@@ -16771,7 +16822,33 @@ img {
     /* -------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
+    .carousel-item h2,
+    .carousel-item h2.s1, .de-title-2 h2.s1,
+    #subheader h2{
+        font-size: 32px;
+    }
+    h5.s1.contactform{
+        font-size: 55px;
 
+    }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
+    }
+
+    .carousel-item h3{
+        font-size: 57px;
+        line-height: .85em;
+        margin-bottom: 40px;
+    }
+    .carousel-control-next-icon.carousel-control-prev-icon{
+        width: 41px;
+        height: 43px;
+        padding-top: 9px;
+    }
+    #de-carousel .carousel-control-next, #de-carousel .carousel-control-prev{
+        width: 58px;
+      }
     .pf_full_width .item {
         float: left;
         width: 100%;
@@ -16840,6 +16917,33 @@ img {
 }
 
 @media only screen and (max-width: 360px) {
+    .carousel-item h2,
+    .carousel-item h2.s1, .de-title-2 h2.s1,
+    #subheader h2{
+        font-size: 27px;
+    }
+    h5.s1.contactform{
+        font-size: 40px;
+
+    }
+    img.f-logo.logoimg {
+        margin-top: -27px;
+        margin-left: -30px;
+    }
+
+    .carousel-item h3{
+        font-size: 57px;
+        line-height: .85em;
+        margin-bottom: 40px;
+    }
+    .carousel-control-next-icon.carousel-control-prev-icon{
+        width: 41px;
+        height: 43px;
+        padding-top: 9px;
+    }
+    #de-carousel .carousel-control-next, #de-carousel .carousel-control-prev{
+        width: 58px;
+      }
     #topbar {
         display: none;
     }
